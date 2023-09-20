@@ -1,3 +1,6 @@
+# https://twitter.com/cassidoo/status/1703653007013896654
+# https://buttondown.email/cassidoo/archive/let-us-remember-that-our-voice-is-a-precious-gift/
+
 def build_stair_case(n: int):
     steps = 0
     req_blocks = 0
