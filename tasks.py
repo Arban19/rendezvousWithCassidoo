@@ -1,3 +1,6 @@
+# https://twitter.com/cassidoo/status/1723954160058462637
+# https://buttondown.email/cassidoo/archive
+
 tasks = [
     {"name": 'Task 1', "duration": 4},
     {"name": 'Task 2', "duration": 2},
