@@ -1,5 +1,5 @@
 # https://twitter.com/cassidoo/status/1723954160058462637
-# https://buttondown.email/cassidoo/archive
+# https://buttondown.email/cassidoo/archive/mellow-doesnt-always-make-for-a-good-story-but-it/
 
 tasks = [
     {"name": 'Task 1', "duration": 4},
