@@ -8,7 +8,6 @@ tasks = [
 
 def get_duration(task):
     return task["duration"]
-get_duration({"name": "Task 1", "duration": 12})
 
 def do_tasks(tasks, time_to_work):
     sorted_tasks = sorted(tasks, key=get_duration)
@@ -26,9 +25,3 @@ def do_tasks(tasks, time_to_work):
 
 assert do_tasks(tasks, 6) == ["Task 2", "Task 5", "Task 6"]
 assert do_tasks(tasks, 0) == []
-
-
-
-
-# > doTasks(tasks, timeToWork)
-# > ['Task 2', 'Task 5', 'Task 6']
