@@ -1,9 +1,7 @@
 def is_prime(x):
-    if x <= 1:
-        return False
-    elif x == 2:
+    if x == 2:
         return True
-    elif x%2 == 0:
+    if x <= 1 or x%2 == 0:
         return False
     for i in range(3,x,2):
         if x % i == 0:
@@ -12,8 +10,8 @@ def is_prime(x):
 
 def between_numbs(x,y,instruction):
     start, end = min(x,y), max(x,y)
-    result = []
 
+    result = []
     for i in range(start,end+1):
         if instruction == "even" and i%2 == 0:
             result.append(i)
