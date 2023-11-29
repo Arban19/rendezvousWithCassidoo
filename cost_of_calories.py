@@ -18,25 +18,23 @@ def combos(items):
         all_combos += combinations(items,i)
     return all_combos
 
+def sum_of_calories(combo):
+    result = 0
+    for item in combo:
+        result += item["calories"]
+    return result
+
 z = combos(zip_items(calories,prices))
 for combo in z:
-    print(combo)
+    print(sum_of_calories(combo))
 
-# def combo_meets_requirement(items):
-#     for items[0] in items:
-#         return sum(items[0])
+def min_cost_for_calories(calories, prices, daily_goal):
+    z = combos(zip_items(calories,prices))
+    valid_combos = filter(lambda combo: sum_of_calories(combo) >= daily_goal,z)
+    prices = []
+    for combo in valid_combos:
+        for item in combo:
+            result.append(item["prices"])
+    return min([prices])
 
-# def min_cost_for_calories(calories, prices, daily_goal):
-#     z = combos(list(zip(calories,prices)))
-#     filter(,z)
-
-
-
-# combinations_list = [(comb, tuple(calories[i] for i in comb)) for i in range(1, len(calories) + 1) for comb in combinations(range(len(calories)), i)]
-# print("Number of combinations:", len(combinations_list))
-# print("Combinations:")
-
-# while daily_goal > elements in combinations_list:
-#     for indices, elements in combinations_list:
-
-#         print(f"Indices: {indices}, Elements: {elements}")
+min_cost_for_calories(calories,prices,1200)
