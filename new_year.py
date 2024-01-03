@@ -3,16 +3,15 @@
 
 # Write a program that prints Happy new year! without using the string/character literals for the characters in the string!
 
-def encode(str): # program to get the ASCII Codes
-    codes = []
-    for char in str:
-        codes.append(ord(char))
-    return codes
+from functools import reduce
 
-def decode(codes): # main program to solve the question
-    result = ""
-    for code in codes:
-        result += chr(code)
-    return result
+def encode(str): # program to get the ASCII Codes
+    return list(map(ord,str))
+
+def convert_and_append(result,code):
+    return result + chr(code)
+
+def decode(codes):
+    return reduce(convert_and_append,codes,"")
 
 assert decode([72, 97, 112, 112, 121, 32, 78, 101, 119, 32, 89, 101, 97, 114, 33]) == "Happy New Year!"
