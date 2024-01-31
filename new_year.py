@@ -8,10 +8,7 @@ from functools import reduce
 def encode(str): # program to get the ASCII Codes
     return list(map(ord,str))
 
-def convert_and_append(result,code):
-    return result + chr(code)
-
 def decode(codes):
-    return reduce(convert_and_append,codes,"")
+    return reduce(lambda result, code: result + chr(code),codes,"")
 
 assert decode([72, 97, 112, 112, 121, 32, 78, 101, 119, 32, 89, 101, 97, 114, 33]) == "Happy New Year!"
