@@ -1,3 +1,6 @@
+# https://twitter.com/cassidoo/status/1756941571352613116
+# https://buttondown.email/cassidoo/archive/youve-got-to-love-whats-yours-alicia-keys/
+
 def from_to(start,end):
     def generator():
         nonlocal start
