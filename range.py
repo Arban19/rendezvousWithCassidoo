@@ -1,11 +1,10 @@
 def from_to(start,end):
-    adjusted_start = start - 1
-    adjusted_end = end - 1
     def generator():
-        nonlocal adjusted_start
-        if adjusted_start < adjusted_end:
-            adjusted_start += 1
-            return adjusted_start
+        nonlocal start
+        if start < end:
+            output = start
+            start += 1
+            return output
     return generator
 
 range = from_to(0,3)
