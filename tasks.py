@@ -9,12 +9,10 @@ tasks = [
     {"name": 'Task 5', "duration": 1},
     {"name": 'Task 6', "duration": 3}]
 
-def get_duration(task):
-    return task["duration"]
-
 def do_tasks(tasks, time_to_work):
-    sorted_tasks = sorted(tasks, key=get_duration)
+    sorted_tasks = sorted(tasks, key=lambda task: task["duration"])
     tasks_completed_names = []
+
     for task in sorted_tasks:
         if task["duration"] <= time_to_work:
             tasks_completed_names.append(task["name"])
@@ -22,8 +20,7 @@ def do_tasks(tasks, time_to_work):
 
     results = []
     for task in tasks:
-        if task["name"] in tasks_completed_names:
-            results.append(task["name"])
+        results = [task["name"] for task in tasks if task["name"] in tasks_completed_names]
     return results
 
 assert do_tasks(tasks, 6) == ["Task 2", "Task 5", "Task 6"]
