@@ -1,3 +1,6 @@
+# https://twitter.com/cassidoo/status/1759461497439146057
+# https://buttondown.email/cassidoo/archive/dont-let-doubt-stop-you-from-getting-where-you/
+
 def word_length_product(words):
     products = [0]
     for index, word in enumerate(words):
