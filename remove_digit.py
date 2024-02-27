@@ -4,14 +4,13 @@
 import math
 
 def remove_digit(numbers, digit):
-    str_dgt, str_nums = str(digit), str(numbers)
-    z = -math.inf
-    for n in range(len(str(numbers))):
-        if str_nums[n] == str_dgt:
-            z = max(int(str_nums[:n] + str_nums[n+1:]), z)
-    return z
+    nums, max_num = str(numbers), -math.inf
+    for n in range(len(nums)):
+        if nums[n] == str(digit):
+            max_num = max(int(nums[:n] + nums[n+1:]), max_num)
+    return max_num if max_num != -math.inf else numbers
 
-assert remove_digit(123451, 1) == 23451
 assert remove_digit(31415926, 1) == 3415926
 assert remove_digit(1231, 1) == 231
-assert remove_digit(121212, 2) == 12121
+assert remove_digit(281881, 8) == 28181
+assert remove_digit(100,2) == 100
