@@ -8,18 +8,17 @@ def is_prime(x):
             return False
     return True
 
-def between_numbs(x,y,instruction):
-    start, end = min(x,y), max(x,y)
+def between_numbs(x, y, instruction):
+    start, end = min(x, y), max(x, y)
 
     result = []
-    for i in range(start,end+1):
+    for i in range(start, end+1):
         if instruction == "even" and i%2 == 0:
             result.append(i)
         elif instruction == "odd" and i%2 != 0:
             result.append(i)
         elif instruction == "prime" and is_prime(i):
             result.append(i)
-
     return result
 
 assert between_numbs(3,11,"even") == [4,6,8,10]

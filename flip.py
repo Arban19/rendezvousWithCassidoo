@@ -11,7 +11,7 @@ def flip(array, direction):
     if direction == "vertical":
         return array[::-1]
     if direction == "horizontal":
-        return list(map(lambda row: row[::-1],array))
+        return list(map(lambda row: row[::-1], array))
 
 assert flip(array, 'vertical') == [[7,8,9],[4,5,6],[1,2,3]]
 assert flip(array, 'horizontal') == [[3,2,1],[6,5,4],[9,8,7]]

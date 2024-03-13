@@ -3,7 +3,7 @@ def separateAndsort(numbers):
     even = []
 
     for number in numbers:
-        if isinstance(number,int):
+        if isinstance(number, int):
             if number != 0:
                 if number % 2 == 0:
                     even.append(number)
@@ -12,7 +12,6 @@ def separateAndsort(numbers):
 
     even.sort()
     odd.sort()
-
     return even, odd
 
 assert separateAndsort([0,1,2,3,4,5]) == ([2,4], [1,3,5])
