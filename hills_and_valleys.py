@@ -1,13 +1,16 @@
 # https://twitter.com/cassidoo/status/1769626762525175899
 # https://buttondown.email/cassidoo/archive/you-can-put-things-off-until-tomorrow-but/
 
+def is_sorted(ls):
+    return sorted(ls, reverse=True) == ls or sorted(ls) == ls
+
 def hills(arr):
-    if len(arr) < 3 or sorted(arr, reverse=True) == arr or sorted(arr) == arr:
+    if len(arr) < 3 or is_sorted(arr):
         return 0
     return sum(1 for i in range(1, len(arr)-1) if arr[i] >= arr[i-1] and arr[i] > arr[i+1])
 
 def valleys(arr):
-    if len(arr) < 3 or sorted(arr, reverse=True) == arr or sorted(arr) == arr:
+    if len(arr) < 3 or is_sorted(arr):
         return 0
     return sum(1 for i in range(1, len(arr)-1) if arr[i] <= arr[i-1] and arr[i] < arr[i+1])
 
