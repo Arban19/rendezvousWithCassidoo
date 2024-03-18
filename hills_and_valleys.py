@@ -1,3 +1,4 @@
+# https://twitter.com/cassidoo/status/1769626762525175899
 # https://buttondown.email/cassidoo/archive/you-can-put-things-off-until-tomorrow-but/
 
 def hills(arr):
