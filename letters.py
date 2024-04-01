@@ -11,7 +11,6 @@ def letters(list_of_strs):
     result = set(perms)
     res = ""
     final_result = list(map(res.join,result))
-    print(sorted(final_result, key=len, reverse=False))
     return len(final_result)
 
 assert letters("X") == 1
