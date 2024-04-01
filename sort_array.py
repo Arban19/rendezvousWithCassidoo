@@ -1,18 +1,9 @@
 def separateAndsort(numbers):
-    odd = []
-    even = []
+    odd = [num for num in numbers if isinstance(num, int) and num != 0 and num % 2 != 0]
+    even = [num for num in numbers if isinstance(num, int) and num != 0 and num % 2 == 0]
 
-    for number in numbers:
-        if isinstance(number, int):
-            if number != 0:
-                if number % 2 == 0:
-                    even.append(number)
-                else:
-                    odd.append(number)
+    return sorted(even), sorted(odd)
 
-    even.sort()
-    odd.sort()
-    return even, odd
 
 assert separateAndsort([0,1,2,3,4,5]) == ([2,4], [1,3,5])
 assert separateAndsort([0,0,0,0,0]) == ([], [])
