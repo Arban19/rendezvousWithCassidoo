@@ -16,11 +16,12 @@ def max_pairs(pairs):
                 right_collection[size] += 1
             else:
                 right_collection[size] = 1    
-
-    return calculate_overlap(left_collection, right_collection)
-
-def calculate_overlap(left_collection, right_collection):
-    return sum(min(left_collection.get(size, 0), right_collection.get(size, 0)) for size in left_collection)
+                
+    result = 0
+    for size in left_collection:
+        if size in right_collection:
+            result += min(left_collection[size], right_collection[size])
+    return result
 
 assert max_pairs(["L-10","R-10","L-11","R-10","L-10","R-11"]) == 3
 assert max_pairs(["L-10","L-11","L-12","L-13"]) == 0
