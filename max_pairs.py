@@ -6,9 +6,16 @@ def max_pairs(pairs):
         direction, size = pair.split("-")
 
         if direction == "L":
-            left_collection[size] = left_collection.get(size, 0) + 1
+            if size in left_collection:
+                left_collection[size] += 1
+            else:
+                left_collection[size] = 1
+        
         elif direction == "R":
-            right_collection[size] = right_collection.get(size, 0) + 1
+            if size in right_collection:
+                right_collection[size] += 1
+            else:
+                right_collection[size] = 1    
 
     return calculate_overlap(left_collection, right_collection)
 
